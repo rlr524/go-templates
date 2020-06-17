@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{{/*can do styles in the head; not sure how to do a stylesheet, not sure why it would be needed as a Go */}}
+{{/*template is more for specific one-off web pages or components, vs a full front-end */}}
+<head>
+    <meta charset="UTF-8">
+    <title>Sages</title>
+    <style>
+        li {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+{{/*with a single struct we don't range over it, only return the state of the data(.) and the element we want to return*/}}
+{{/*(Name or Motto)*/}}
+{{/*with a slice of a struct, we're back to ranging over it; */}}
+<ul>
+    {{range .}}
+        <li>{{.Name}} - {{.Motto}}</li>
+    {{end}}
+</ul>
+</body>
+</html>
