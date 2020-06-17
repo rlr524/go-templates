@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{{/*can do styles in the head; not sure how to do a stylesheet, not sure why it would be needed as a Go */}}
+{{/*template is more for specific one-off web pages or components, vs a full front-end */}}
+<head>
+    <meta charset="UTF-8">
+    <title>Sages</title>
+    <style>
+        li {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+{{/* here we are passing in whatever the data is at that point in execution; in this case we're
+using range to range over that piece of data, specifically the slice in main; the output of range
+is the input of . ; when we use range we also need to end the range */}}
+<ul>
+    {{range .}}
+    <li>{{.}}</li>
+    {{end}}
+</ul>
+</body>
+</html>

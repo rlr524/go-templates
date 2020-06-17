@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello, Rila!</title>
+</head>
+<body>
+{{/*we're creating a variable to use to pass in vs just the {{.}}*/}}
+{{$wisdom := .}}
+{{/*here we are passing in whatever the data is at that point in execution */}}
+{{/*<h1>The meaning of life: {{.}}</h1>*/}}
+<h1>The meaning of life: {{$wisdom}}</h1>
+</body>
+</html>
