@@ -14,10 +14,12 @@
 <body>
 {{/* here we are passing in whatever the data is at that point in execution; in this case we're
 using range to range over that piece of data, specifically the slice in main; the output of range
-is the input of . ; when we use range we also need to end the range */}}
+is the input of . as we range over the slice the current state of the date becomes a specific element of the slice;
+when we use range we also need to end the range */}}
 <ul>
-    {{range .}}
-    <li>{{.}}</li>
+{{/*    {{range .}}*/}}
+    {{range $index, $element := .}}
+    <li>{{$index}} - {{$element}}</li>
     {{end}}
 </ul>
 </body>
