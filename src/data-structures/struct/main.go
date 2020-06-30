@@ -9,7 +9,7 @@ import (
 var tpl *template.Template
 
 type sage struct {
-	Name string
+	Name  string
 	Motto string
 }
 
@@ -19,7 +19,7 @@ func init() {
 
 func main() {
 	yoda := sage{
-		Name: "Yoda",
+		Name:  "Yoda",
 		Motto: "There is no try. Do or do not.",
 	}
 
@@ -30,7 +30,7 @@ func main() {
 	}
 
 	jesus := sage{
-		Name: "Jesus",
+		Name:  "Jesus",
 		Motto: "Do to others what you want them to do to you.",
 	}
 
