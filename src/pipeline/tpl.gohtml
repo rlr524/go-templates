@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pipeline in Templates</title>
+</head>
+<body>
+{{/* just give the data (number) */}}
+{{.}}
+{{/* take in the data (number) as an arg on the function mapped to fdbl */}}
+{{. | fdbl}}
+{{/* take in the output from fdbl as an arg in fsq */}}
+{{. | fdbl | fsq}}
+{{/* take in the output from fsq as an arg in fsqrt */}}
+{{. | fdbl | fsq | fsqrt}}
+</body>
+</html>
