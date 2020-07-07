@@ -82,9 +82,15 @@ func main() {
 		Species: "Alien android supercomputer",
 		Age:     15,
 	}
+	
+	s := Character{
+		Name:    "Haruhi Suzumiya",
+		Species: "Deity",
+		Age:     15,
+	}
 
 	shows := []Anime{k, a, h}
-	girls := []Character{y, m, n}
+	girls := []Character{y, m, n, s}
 
 	var data = struct {
 		Works []Anime
@@ -99,6 +105,11 @@ func main() {
 	//	log.Fatalln(err)
 	//}
 
+	//err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", data)
+	//if err != nil {
+	//	log.Fatalln(err)
+	//}
+	
 	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", data)
 	if err != nil {
 		log.Fatalln(err)
